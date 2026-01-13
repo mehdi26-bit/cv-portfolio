@@ -1,16 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Mon Portfolio</title>
-</head>
-<body>
-  <h1>Bienvenue sur mon portfolio</h1>
-  <p>Étudiant en Data Science & Business Intelligence</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADIL EL MEHDI | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --secondary: #6366f1;
+            --dark: #020617;
+            --gold: #f59e0b;
+        }
 
-  <h2>Liens</h2>
-  <ul>
-    <li><a href="cv.pdf">Télécharger mon CV</a></li>
-    <li><a href="https://www.kaggle.com/">Mon profil Kaggle</a></li>
-  </ul>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--dark);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .heading-font { font-family: 'Syncopate', sans-serif; }
+
+        /* Background Design */
+        .mesh-gradient {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* Modern Glass card */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #0ea5e9, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animated Border for Avatar */
+        .avatar-container {
+            position: relative;
+            width: 180px; height: 180px;
+        }
+
+        .avatar-container::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border: 2px dashed var(--primary);
+            border-radius: 50%;
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="mesh-gradient"></div>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <header class="flex flex-col items-center text-center mb-20">
+            <div class="avatar-container mb-8">
+                <img src="https://ui-avatars.com/api/?name=Sadil+El+Mehdi&background=0ea5e9&color=fff&size=200" 
+                     alt="SADIL EL MEHDI" 
+                     class="rounded-full w-full h-full object-cover border-4 border-slate-900 shadow-2xl">
+            </div>
+            
+            <h1 class="heading-font text-4xl md:text-6xl font-bold mb-4 tracking-tighter">
+                SADIL <span class="gradient-text">EL MEHDI</span> 
+            </h1>
+            <p class="text-slate-400 text-lg tracking-[0.3em] uppercase mb-8">Curriculum Vitae [cite: 8]</p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:mahdisadil12@gmail.com" class="glass-card px-5 py-2 rounded-full text-sm flex items-center gap-2">
+                    <i class="fas fa-envelope text-sky-400"></i> mahdisadil12@gmail.com [cite: 4]
+                </a>
+                <span class="glass-card px-5 py-2 rounded-full text-sm flex items-center gap-2">
+                    <i class="fas fa-phone text-sky-400"></i> (212) 625-148675 [cite: 3]
+                </span>
+                <span class="glass-card px-5 py-2 rounded-full text-sm flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt text-sky-400"></i> Salé, Maroc [cite: 2]
+                </span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="space-y-8">
+                <section class="glass-card p-8 rounded-3xl">
+                    <h2 class="heading-font text-xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-bolt text-gold"></i> SKILLS [cite: 9]
+                    </h2>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex justify-between items-center">
+                            <span>Deserving a job</span>
+                            <span class="text-sky-400 font-bold">5 years + [cite: 10]</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Cooking</span>
+                            <span class="text-sky-400 font-bold">4 years + [cite: 14, 15]</span>
+                        </li>
+                        <li class="flex items-center gap-2 italic">
+                            <i class="fas fa-laugh-wink text-pink-400"></i> Joking [cite: 13]
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="glass-card p-8 rounded-3xl">
+                    <h2 class="heading-font text-xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-language text-sky-400"></i> LANGUAGES [cite: 11]
+                    </h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-2"><span>French</span><span>Mother tongue [cite: 12]</span></div>
+                            <div class="h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-sky-500 w-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-2"><span>English</span><span>Advanced [cite: 12]</span></div>
+                            <div class="h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-indigo-500 w-[85%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="lg:col-span-2 space-y-8">
+                
+                <section class="glass-card p-8 md:p-10 rounded-3xl">
+                    <h2 class="heading-font text-2xl font-bold mb-8">WORK EXPERIENCES [cite: 21]</h2>
+                    <div class="border-l-2 border-sky-500/30 pl-8 relative">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-sky-500 shadow-[0_0_15px_rgba(14,165,233,0.5)]"></div>
+                        <span class="text-sky-400 font-bold text-sm">2000 - PRESENT [cite: 30]</span>
+                        <h3 class="text-xl font-bold mt-2">Job 1 [cite: 22]</h3>
+                        <p class="text-slate-400 mb-2">Employer: My employer [cite: 23]</p>
+                        <p class="text-slate-300 leading-relaxed">My job was to ... [cite: 24]</p>
+                    </div>
+                </section>
+
+                <section class="glass-card p-8 md:p-10 rounded-3xl">
+                    <h2 class="heading-font text-2xl font-bold mb-8">EDUCATION [cite: 16]</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <span class="text-indigo-400 font-bold text-sm">1997 - EXPECTED 2025 [cite: 28]</span>
+                            <h3 class="text-xl font-bold mt-2">Master's degree in everything and nothing [cite: 17]</h3>
+                            <p class="text-slate-400 italic">Ecole Superieure de Technologie Salé | GPA: 5.50/4.33 [cite: 17]</p>
+                            <p class="mt-2 text-slate-300">Thesis: "My thesis is about something" [cite: 18]</p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-800">
+                            <h4 class="font-bold flex items-center gap-2">
+                                <i class="fas fa-file-invoice text-gold"></i> PROFESSIONAL EXAMS [cite: 19]
+                            </h4>
+                            <p class="mt-2 text-slate-300">Probability exam - An actuarial organisation (2022) [cite: 20, 31]</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-card p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-indigo-950/20">
+                    <h2 class="heading-font text-2xl font-bold mb-6">AWARDS [cite: 25]</h2>
+                    <div class="flex gap-6">
+                        <div class="text-4xl text-gold"><i class="fas fa-trophy"></i></div>
+                        <div>
+                            <h3 class="font-bold text-lg">Best breakdancer (2002) [cite: 26, 29]</h3>
+                            <p class="text-sm text-slate-400 mb-2">Location: My niece's birthday [cite: 27]</p>
+                            <p class="text-slate-300 text-sm italic">"I won this award because of my tremendous dancing skills. Everybody at the party disagreed but I still think I deserved it more than little Kevin." [cite: 32, 33]</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="glass-card p-8 rounded-3xl">
+                    <h2 class="heading-font text-xl font-bold mb-6">COMMUNICATIONS [cite: 34]</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-800/40 rounded-2xl border border-white/5">
+                            <span class="text-xs text-sky-400">1990 [cite: 42]</span>
+                            <h4 class="font-bold">Communication 1 [cite: 37]</h4>
+                            <p class="text-sm text-slate-400">1st grade class [cite: 38]</p>
+                            <p class="text-xs mt-2 italic">Invited by my teacher. It was a great summer. [cite: 39]</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <footer class="mt-20 text-center text-slate-500 text-xs border-t border-slate-800 pt-8">
+            <p class="uppercase tracking-widest">Sadil El Mehdi &copy; 2026 | Compilation: January 13, 2026 [cite: 35, 40]</p>
+        </footer>
+    </main>
+
 </body>
 </html>
